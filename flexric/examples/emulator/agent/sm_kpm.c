@@ -722,4 +722,3 @@ sm_ag_if_ans_t write_ctrl_kpm_sm(void const* src)
   sm_ag_if_ans_t ans = {0};
   return ans;
 }
-
