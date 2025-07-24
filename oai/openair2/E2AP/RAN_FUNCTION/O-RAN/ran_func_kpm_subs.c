@@ -91,7 +91,7 @@ static uldlcounter_t last_total_prbs[MAX_MOBILES_PER_GNB] = {0};
 static meas_record_lst_t fill_DRB_PacketSuccessRateUlgNBUu(__attribute__((unused))uint32_t gran_period_ms, cudu_ue_info_pair_t ue_info, __attribute__((unused))const size_t ue_idx)
 {
   meas_record_lst_t meas_record = {0};
-  
+
   // Get PDCP stats per DRB
   const int rb_id = 1;  // at the moment, only 1 DRB is supported
   nr_pdcp_statistics_t pdcp = get_pdcp_stats_per_drb(ue_info.rrc_ue_id, rb_id);
@@ -125,7 +125,7 @@ static nr_rlc_statistics_t get_rlc_stats_per_drb(const rnti_t rnti, const int rb
 static meas_record_lst_t fill_DRB_RlcPacketDropRateDl(__attribute__((unused))uint32_t gran_period_ms, cudu_ue_info_pair_t ue_info, __attribute__((unused))const size_t ue_idx)
 {
   meas_record_lst_t meas_record = {0};
-  
+
   // Get RLC stats per DRB
   const int rb_id = 1;  // at the moment, only 1 DRB is supported
   nr_rlc_statistics_t rlc = get_rlc_stats_per_drb(ue_info.ue->rnti, rb_id);
