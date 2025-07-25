@@ -96,7 +96,7 @@ static
 {
   assert(ue != NULL);
   //printf("DRB.PacketSuccessRateUlgNBUu \n");
-  return fill_rnd_int_data();
+  return fill_rnd_float_data();
 }
 
 static
@@ -104,7 +104,7 @@ static
 {
   assert(ue != NULL);
   //printf("DRB.RlcPacketDropRateDl \n");
-  return fill_rnd_int_data();
+  return fill_rnd_float_data();
 }
 
 static
