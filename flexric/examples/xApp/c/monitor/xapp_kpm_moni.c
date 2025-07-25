@@ -97,10 +97,6 @@ void log_int_value(byte_array_t name, meas_record_lst_t meas_record)
     printf("DRB.PdcpSduVolumeDL = %d [kb]\n", meas_record.int_val);
   } else if (cmp_str_ba("DRB.PdcpSduVolumeUL", name) == 0) {
     printf("DRB.PdcpSduVolumeUL = %d [kb]\n", meas_record.int_val);
-  } else if (cmp_str_ba("DRB.PacketSuccessRateUlgNBUu", name) == 0) {
-    printf("DRB.PacketSuccessRateUlgNBUu = %.2f [UL.SUCCESS.RATE]\n", meas_record.int_val / 100.0);
-  } else if (cmp_str_ba("DRB.RlcPacketDropRateDl", name) == 0) {
-    printf("DRB.RlcPacketDropRateDl = %.2f [DL.RLC.DROP.RATE]\n", meas_record.int_val / 100.0);
   } else {
     // printf("Measurement Name not yet supported\n");
     printf("Measurement name not matched: ");
